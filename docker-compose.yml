@@ -32,10 +32,11 @@ services:
   client:
     build:
       context: ./client
-    # production-версия не нуждается в портах
-    # она просто собирает статику
     depends_on:
       - server
+    networks:
+      - app_network
+
 
   nginx:
     image: nginx:stable-alpine

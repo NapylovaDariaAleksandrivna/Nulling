@@ -4,9 +4,8 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Настройка для .env, который лежит на уровень выше папки server/
 env = environ.Env()
-environ.Env.read_env(os.path.join(BASE_DIR, '../.env'))  # 👈 это важно
+environ.Env.read_env(os.path.join(BASE_DIR, '../.env')) 
 
 DATABASES = {
     'default': {
@@ -43,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles', 'name'
 ]
 
 MIDDLEWARE = [
